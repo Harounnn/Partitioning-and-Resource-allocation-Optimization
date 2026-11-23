@@ -1,4 +1,4 @@
-# Projet Big Data — Analyse distribuée de données de capteurs
+# Projet Big Data - Analyse distribuée de données de capteurs
 
 **Niveau :** M2 DSIR  
 **Sujet :** Optimisation des ressources de calcul et du partitionnement pour l'analyse batch de données réelles de capteurs.
