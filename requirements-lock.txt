@@ -1,0 +1,13 @@
+colorama==0.4.6
+iniconfig==2.3.1
+numpy==2.5.5
+packaging==26.3
+pandas==2.2.3
+pluggy==1.7.0
+py4j==0.10.9.9
+pyarrow==18.1.0
+pyspark==4.1.1
+pytest==8.3.4
+python-dateutil==4.0.0
+pytz==2026.6
+tzdata==2026.6

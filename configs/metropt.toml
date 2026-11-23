@@ -1,0 +1,14 @@
+[input]
+path = "data/raw/MetroPT3(AirCompressor).csv"
+chunk_size = 50000
+
+[output]
+path = "data/processed/metropt_5min.parquet"
+manifest_path = "data/manifests/metropt.csv"
+validation_report_path = "reports/day1_validation.md"
+
+[aggregation]
+window = "5min"
+timestamp_column = "timestamp"
+temperature_column = "Oil_temperature"
+pressure_columns = ["TP2", "TP3", "H1", "DV_pressure", "Reservoirs"]

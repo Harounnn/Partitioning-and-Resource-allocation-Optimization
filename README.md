@@ -73,7 +73,16 @@ Aucune donnée synthétique dupliquée ne sera présentée comme un volume réel
 
 ## 7. Exécution
 
-Les commandes d'installation et d'exécution seront ajoutées après validation de l'environnement Python et de la version PySpark retenue. Consulter `docs/DAY1_CHECKLIST.md` pour démarrer.
+Depuis la racine du dépôt, dans PowerShell :
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
+.\.venv\Scripts\python.exe -m pytest -q
+.\.venv\Scripts\python.exe scripts\run_metropt.py
+```
+
+Les paramètres du pipeline se trouvent dans `configs/metropt.toml`. Le script lit les données par blocs, écrit `data/processed/metropt_5min.parquet`, actualise `data/manifests/metropt.csv` et produit `reports/day1_validation.md`.
 
 ## 8. Livrables
 
@@ -83,8 +92,8 @@ Les commandes d'installation et d'exécution seront ajoutées après validation 
 
 ## 9. État d'avancement
 
-- [ ] Environnement vérifié
-- [ ] Pipeline Python MetroPT-3
+- [x] Environnement vérifié (RAM Windows mesurée à 19,91 Gio, contre 16 Go annoncés pour la cible)
+- [x] Pipeline Python MetroPT-3
 - [ ] Pipeline PySpark MetroPT-3
 - [ ] Vérification d'équivalence
 - [ ] Traitement UK-DALE
