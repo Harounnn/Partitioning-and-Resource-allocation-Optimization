@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Data files — do not commit raw or processed datasets
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Experiment outputs (keep selected small CSV summaries if desired)
+*.parquet
+*.flac
+*.wav
+*.zip
+*.gz
+*.csv
+!data/manifests/*.csv
+
+# Logs and temporary files
+logs/
+*.log
+tmp/
+temp/
+spark-warehouse/
+metastore_db/
+derby.log
+
+# Build
+dist/
+build/
+*.egg-info/
