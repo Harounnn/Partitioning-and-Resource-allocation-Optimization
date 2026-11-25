@@ -1,0 +1,25 @@
+{
+  "input_path": "data/raw/MetroPT3(AirCompressor).csv",
+  "input_size_bytes": 218300507,
+  "input_sha256": "db30ccb4ea402e3c8bf2c99db06e288d4f2a772f6928f9dbe26a920d69793e24",
+  "output_path": "data/processed/metropt_5min_spark_local2.parquet",
+  "spark_version": "4.1.1",
+  "master": "local[2]",
+  "shuffle_partitions": 8,
+  "session_timezone": "UTC; les timestamps source restent sans fuseau via TIMESTAMP_NTZ",
+  "window_duration": "5 minutes",
+  "parquet_batch_rows": 8192,
+  "window_convention": "début inclus, fin exclue; fenêtres vides conservées",
+  "duplicates": "aucune déduplication; chaque ligne source contribue au compte",
+  "window_count": 61392,
+  "sample_count": 1516948,
+  "empty_window_count": 10610,
+  "write_seconds": 27.866,
+  "output_parts": [
+    {
+      "logical_path": "data/processed/metropt_5min_spark_local2.parquet",
+      "size_bytes": 3700182,
+      "sha256": "e3ae0d4c964d8585794fc4f6a8e91f54953f643f3bf209e20343f9367a9d6b74"
+    }
+  ]
+}

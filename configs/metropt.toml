@@ -12,3 +12,17 @@ window = "5min"
 timestamp_column = "timestamp"
 temperature_column = "Oil_temperature"
 pressure_columns = ["TP2", "TP3", "H1", "DV_pressure", "Reservoirs"]
+
+[spark]
+master = "local[1]"
+shuffle_partitions = 8
+session_timezone = "UTC"
+timestamp_format = "yyyy-MM-dd HH:mm:ss"
+window_duration = "5 minutes"
+parquet_batch_rows = 8192
+local1_output_path = "data/processed/metropt_5min_spark_local1.parquet"
+local2_output_path = "data/processed/metropt_5min_spark_local2.parquet"
+
+[validation]
+absolute_tolerance = 0.00000001
+relative_tolerance = 0.00001
